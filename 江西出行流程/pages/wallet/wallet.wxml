@@ -1,0 +1,37 @@
+<view class='main'>
+  <view class='top'>
+      <view style='font-size:30rpx'>个人余额(元)</view>
+      <view style='font-size:60rpx'>￥0.00</view>
+      <view class='recharge'>充值</view>
+  </view>
+  <view style='margin-top:10px;' wx:for="{{quota}}" wx:key="{{index}}">
+    <view class='box-quota'>
+      <view style='margin-left:30rpx'>
+       <view class='quota-left'>{{item.bumen}}</view>
+        <view class='quota-left' style='color:#999;'>{{item.money}}</view>
+      </view>
+      <view style='margin-right:40rpx'>{{item.quota}}</view>
+    </view>
+  </view>
+  <view>
+  <view style='margin-top:10px;'>
+    <view class='box-quota' style='height:70rpx'>
+      <view class='quota-left'style='margin-left:40rpx' >发票</view>
+      <view class='img-right'>
+        <image src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+      </view>
+    </view>
+  </view>
+   <view style='margin-top:10px;'>
+    <view class='box-quota' style='height:70rpx'>
+      <view class='quota-left'style='margin-left:40rpx' >支付记录</view>
+      <view class='img-right'>
+        <image src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+      </view>
+    </view>
+  </view>
+    
+  </view>
+  
+
+</view>

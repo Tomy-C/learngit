@@ -1,0 +1,27 @@
+<view class='font-s'>
+  <view class='showcost'>
+    <text style='font-size:60rpx'>36.87</text><text >元</text>
+  </view>
+  <view >
+    <view class='onecost'>
+      <view class='between ones' wx:for="{{spend}}" wx:key="{{index}}">
+        <text>{{item.money}}</text><text>{{item.cost}}</text>
+      </view> 
+    </view>
+    <view class='twocost'>
+      <view class='between twos' wx:for="{{other}}" wx:key="{{index}}">
+        <text>{{item.money}}</text><input placeholder='{{item.input}}'></input>
+      </view>
+    </view>
+    <view class='onecost' style='border:none'>
+      <view class='ones'> <input placeholder='其他费用'></input> </view>
+      <view >
+        <textarea class='area'  placeholder='请输入其他费用说明(50字以内)'></textarea>
+      </view> 
+    </view>
+  </view>
+ <view class='btns '>
+      <view><button class='btn btn-e' bindtap='toindex'>确认</button></view>
+      <view><button class='btn btn-s' bindtap='toapp'>续单</button></view>
+  </view>
+</view>

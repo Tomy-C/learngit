@@ -1,0 +1,32 @@
+<view>
+  <view wx:for="{{userlist}}" wx:key="*this">
+    <view class='list-top flex-bet' bindtap='showcom'  data-id="{{index}}">
+      <text>{{item.initial}}</text>
+      <image src="{{ oneshow ?' /sourceImage/侧栏菜单/black_rightArrow.png':'/sourceImage/侧栏菜单/black_bottomArrow.png'}}" class='btn-right' ></image>
+    </view>
+    <!--公司盒子  -->
+    <view class='{{uhide==index?"":"hidden"}}' >
+      <view wx:for="{{item.company}}" wx:key="*this">
+    <view class='flex-bet' bindtap='showuser' data-id="{{index}}" >
+      <text style='margin-left:40px;'>{{item.name}}</text>
+      <image  src="{{bumen==index?' /sourceImage/侧栏菜单/black_bottomArrow.png':'/sourceImage/侧栏菜单/black_rightArrow.png'}}" class='btn-right'  ></image>
+    </view>
+    <!--人员盒子  -->
+    <view class='{{bumen==index?"":"hidden"}}'>
+     <view wx:for="{{item.username}}" wx:key="{{index}}" > 
+      <view class='flex-bet' bindtap='selectid'  data-id='{{index}}'>
+          <text style='margin-left:80px;color:#999;'>{{item.user}}                 </text>
+        <image src="{{userid==index?'/sourceImage/home/select_icon_popupwindow@3x.png':'/sourceImage/home/n_check_icon_content@3x.png'}}" class='btn-sel'></image>
+      </view>
+      
+     </view>
+    </view>
+    
+    </view>
+    </view>
+  </view>
+     <!--按钮  -->
+     <view class='btn'>
+      <button size='default' type='primary' bindtap='senduser'>确定</button>
+     </view>
+</view>

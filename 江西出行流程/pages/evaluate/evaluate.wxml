@@ -1,0 +1,35 @@
+<view class='big'>
+  <view class='flex top-info' >
+  <view class='flex info-detail '>
+    <view>
+     <image class='image-head' src='/sourceImage/侧栏菜单/left_headportrait_bg_navbar@3x.png'></image>
+    </view>
+    <view class='flex'class='user-info' >
+      <view><text class='name'>郑清源</text><image class='image-star' src='/sourceImage/待应答/star level_icon_popupwindow.png@3x.png'></image><text>5.0 </text><text> 708单</text></view>
+      <view><text>闽C501KP</text></view>
+      <view><text class='pai'>丰田</text> <text class='pai'>皇冠</text> <text class='pai'>黑色</text></view>
+    </view>
+  </view>
+    <view><image class='image' src='/sourceImage/待应答/call_icon_content@3x.png'></image></view>
+  </view>
+  <view class='info-container'>
+    <view>本次订单共花费</view>
+    <view><text>103.12</text><text>元</text></view>
+    <view class='flex info-detail'><text>查看明细</text> <image src='/sourceImage/home/enterinto_icon_content@3x.png' class='image'></image></view>
+    <view class=''>请为此服务进行评价</view>
+    <view>
+      <image class='image' src='/sourceImage/待应答/star level_icon_popupwindow.png@3x.png'></image>
+      <image class='image' src='/sourceImage/待应答/star level_icon_popupwindow.png@3x.png'></image>
+      <image class='image' src='/sourceImage/待应答/star level_icon_popupwindow.png@3x.png'></image>
+      <image class='image' src='/sourceImage/待应答/star level_icon_popupwindow.png@3x.png'></image>
+      <image class='image' src='/sourceImage/待应答/star level_icon_popupwindow.png@3x.png'></image>
+    </view>
+    <view>
+      <textarea class='textarea' placeholder='评论...'></textarea>
+    </view>
+    <view class='btn'>
+     <button>提交评论</button>
+    </view>
+    <map style='width:100% '></map>
+  </view> 
+</view>

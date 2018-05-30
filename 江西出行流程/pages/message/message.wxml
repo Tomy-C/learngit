@@ -1,0 +1,23 @@
+<view  class='msg' >
+<!--消息盒子  -->
+<navigator url='/pages/msgdetail/msgdetail' hover-class="navigator-hover">
+  <view class='msg-box'>
+    <view class='flex msg-top'>
+      <view style='font-weight:600;font-size:35rpx'>消息1</view> <view style='color:#999;font-size:30rpx'>2018-01-01 09:30:00</view>
+    </view>
+    <text style='font-size:30rpx;color:#999'>内容1</text>
+  </view>
+</navigator>
+
+<!--消息盒子  -->
+<navigator url='/pages/msgdetail/msgdetail' hover-class="navigator-hover">
+  <view class='msg-box'>
+    <view class='flex msg-top'>
+      <view style='font-weight:600;'>消息1</view> <view style='color:#999;font-size:30rpx'>2018-01-01 09:30:00</view>
+    </view>
+    <text style='font-size:30rpx;color:#999'>内容1</text>
+  </view>
+</navigator>
+  
+  
+</view>

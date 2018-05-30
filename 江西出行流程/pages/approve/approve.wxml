@@ -1,0 +1,61 @@
+<view>
+  <view class='money-box'>
+    <view>
+      <view>财政额度</view>
+      <view class='font-style'>5000.00元</view>
+    </view>
+    <view class="font-style">已用3865.13元/剩余46134.87</view>
+  </view>
+    <view class='money-box'>
+    <view>
+      <view>单位额度</view>
+      <view class='font-style'>1000.00元</view>
+    </view>
+    <view class="font-style">已用00.00元/剩余100</view>
+  </view>
+   <view class='money-box'>
+      <view>审批历史</view>
+      <view><image style='width:40rpx;height:40rpx' src='/sourceImage/home/enterinto_icon_content@3x.png'></image></view>
+   </view>  
+</view>
+<view style='margin-top:20px;border-top:1px solid #999;'>
+<!--每个订单信息  -->
+  <view class='msg-box'wx:for="{{info}}"  wx:key="{{index}}" bindtap='todetail' data-id="{{index}}">
+    <view class='align user-info font-s'>
+      <view class='font-s'>
+        <view >{{item.name}}</view>
+        <view>{{item.tel}}</view>
+      </view>
+      <view style='margin:20rpx' >
+        <text class='user-box' wx:for="{{item.use}}" wx:key="{{index}}">{{item.user}}</text>
+      </view>
+    </view>
+    <view>
+      <view class='align font-s' style='margin:20rpx'>
+        <view>
+          <image class='sel' src="{{key==index?'/sourceImage/待审批/h_check_icon_content.png': '/sourceImage/待审批/n_check_icon_content@3x.png'}}" catchtap='selorder' data-id="{{index}}"></image> <text class='font-style' >{{item.time}}</text>
+        </view>
+         <view>{{item.cost}}</view>
+       </view>
+        <view style='margin-left:10%'>
+          <view class='font-m'>
+          <image class='box-adi'  src='/sourceImage/home/red_circle.png'></image><text>{{item.departure}}</text> 
+          </view>
+          <view class='box-add align'>
+          <view>
+           <image  class='box-adi'  src='/sourceImage/home/green_circle.png'></image> <text>{{item.destination}}</text> 
+          </view>
+          <view style='margin:20rpx' class='font-s'> {{item.pay}}</view>
+          </view>
+        </view>
+    </view>
+  </view>
+    
+</view> 
+<view class='select-btn'>
+  <view class='reject'>驳回</view>
+  <view class='agree' bindtap='toorder'>批准</view>
+</view>
+
+
+

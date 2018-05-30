@@ -1,0 +1,45 @@
+.showcost{
+  width: 100%;
+  border-bottom: 1px solid #999;
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+.onecost{
+  margin:  0 40rpx;
+  border-bottom:1px solid #999;
+}
+.twocost{
+  margin-left: 35rpx;
+}
+.ones{
+  padding: 10rpx;
+ 
+}
+.twos{
+  padding: 10rpx;
+  border-bottom:1px solid #999;
+}
+.area{
+  height:10vh;
+  width:100%;
+  border:1px solid #999;
+  padding: 10rpx;
+}
+.btns{
+  margin: 30rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.btn{
+  border-radius: 23px;
+  color: #fff;
+  width: 35vw;
+  font-size: 40rpx
+}
+.btn-s{
+  background-color: #3B99D7;
+}
+.btn-e{
+  background-color:#FC625D;
+}

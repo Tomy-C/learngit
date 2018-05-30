@@ -1,0 +1,10 @@
+<view class='main'>
+ <view class='addre'>
+  <view class='goto'><text >泉州</text> <image style='width:10px;height:10px;' src='/sourceImage/待应答/gray_dropdownarrow_icon@3x.png'></image></view> <input placeholder='你要从哪里出发' placeholder-style='font-size:30rpx;padding-left:5px;'/>
+ </view>
+ <view class='showhi'>
+ <view class='add-list'  bindtap='toto'>
+ <image class='clock' src='/sourceImage/待应答/gray_time.png'></image><text class='add'>泉州市行政服务中心</text>
+ </view>
+ </view>
+</view> 

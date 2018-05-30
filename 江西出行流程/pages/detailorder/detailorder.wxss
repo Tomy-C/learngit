@@ -1,0 +1,37 @@
+.box-adi{
+  width:6px;
+  height:6px;
+  margin: 2px 5px;
+}
+.box{
+  border-bottom: 1px solid #999;
+}
+.big{
+  margin: 10px auto;
+  width: 90%;
+}
+.tip{
+  margin: 20rpx;
+  color: #999;
+  width:200rpx;
+  display: inline-block
+}
+.pay{
+  align-items: center;
+}
+.btns{
+  margin: 30rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.btn{
+  border-radius: 23px;
+  color: #fff;
+  width: 30vw
+}
+.btn-s{
+  background-color: #3B99D7;
+}
+.btn-e{
+  background-color:#FC625D;
+}

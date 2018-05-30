@@ -1,0 +1,73 @@
+.big{
+  color:#999;
+  background-color: #fff;
+}
+.flex{
+  display: flex;
+}
+.image{
+  width: 50rpx;
+  height: 50rpx;
+  margin:0 5rpx;
+}
+
+.image-head{
+  width: 100rpx;
+  height: 100rpx;
+  margin:0 30rpx 0 0;
+}
+.image-star{
+  width: 30rpx;
+  height: 30rpx;
+  margin:0 10rpx;
+}
+.info-detail{
+  
+  align-items: center;
+}
+.top-info{
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+}
+.user-info{
+  font-size:30rpx;
+  flex-direction: column;
+  
+}
+.name{
+  color:black;
+  font-size: 35rpx;
+}
+.pai{
+  margin: 5px 5px 0 0;
+}
+.info-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50rpx;
+  box-sizing: border-box;
+} 
+.textarea{
+  height: 5em;
+  border:1px solid #999;
+  padding: 10px;
+}
+.btn{
+  width: 40%;
+  margin:20px;
+
+}
+.btn button{
+  height: 46px;
+  border-radius: 23px;
+  color: #fff;
+  background-color: #3B99D7;
+}

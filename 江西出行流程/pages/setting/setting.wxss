@@ -1,0 +1,28 @@
+.box-quota{
+ display: flex;
+ width: 100%;
+ margin: 0 auto;
+ background-color: #fff;
+ justify-content: space-between;
+ color: #999;
+ align-items: center;
+
+border-radius: 5px;
+box-shadow: 1px 1px 3px #999;
+}
+.quota-left{
+  margin: 10rpx;
+  color: black;
+}
+.img-right{
+  margin-right:30rpx
+}
+.img-right image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.box{
+  margin: 15px 0;
+  font-size: 35rpx;
+  background-color: #fff;
+}

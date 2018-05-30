@@ -1,0 +1,11 @@
+<view style='margin:20px;'>
+  <radio-group class="radio-group">
+  <label class="radio" wx:for="{{items}}" wx:key='{{index}}' data-id="{{index}}" bindtap='select'>
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+</view>
+<view style='width:80%;margin:0 auto'>
+  <button type='primary' bindtap='whyuser'>确认</button>
+</view>
+

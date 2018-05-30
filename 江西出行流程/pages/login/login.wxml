@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="login-icon">
+    <image bindtap="bindViewTap" class="login-img" src="/sourceImage/登录/headportrait_bg_navbar@3x.png" mode="cover"></image>
+  </view>
+  <view class='login-form'>
+   <view class="inputView"> 
+  <image class="nameImage" src="/sourceImage/登录/username.png"></image> 
+  <input class="inputText" placeholder="请输入账号" bindinput="phoneInput" /> 
+ </view>
+  <view class="inputView"> 
+  <image class="keyImage" src="/sourceImage/登录/password.png"></image> 
+  <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+  </view>
+   <view class="loginBtnView"> 
+  <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button> 
+ </view> 
+ </view>
+</view>

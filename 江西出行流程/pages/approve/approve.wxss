@@ -1,0 +1,62 @@
+.money-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #999;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.font-style{
+  font-size: 30rpx;
+  color:#999;
+}
+
+.select-btn{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.sel{
+  width:40rpx;
+  height:40rpx;
+  margin:0 10rpx 
+}
+.reject,.agree{
+  width: 50%;
+  text-align: center;
+  padding:10px 0; 
+  line-height: 40px;
+}
+.reject{
+  background-color: #999;
+  color: #333;
+}
+.agree{
+   background-color: #3B99D7;
+   color: #fff;
+}
+.user-info{
+  width: 90%;
+  margin-left: 10%;
+  border-bottom: 1px dashed #999;
+  padding: 10rpx 0;
+}
+.user-box{
+  border: 1px solid #999;
+  color: #999;
+  font-size: 25rpx;
+  padding: 0 5rpx;
+  margin: 0 5px;
+}
+.box-adi{
+  width:6px;
+  height:6px;
+  margin: 2px 5px;
+}
+.msg-box{
+  border-bottom: 1px solid #999;
+}

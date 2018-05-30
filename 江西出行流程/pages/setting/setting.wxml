@@ -1,0 +1,25 @@
+<view class='main'>
+  <view class='box'>
+  <view style='margin-top:10px;height:60rpx' wx:for="{{set}}">
+    <view class='box-quota'>
+      <view class='quota-left'style='margin-left:40rpx'>{{item.setting}}</view>
+      <view class='img-right'>
+        <image src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+      </view>
+    </view>
+  </view>
+ 
+  </view>
+  <view class='box'>
+  <view wx:for="{{help}}" style='margin-top:10px;height:60rpx'>
+    <view class='box-quota'>
+      <view class='quota-left'style='margin-left:40rpx' >{{item.tip}}</view>
+      <view class='img-right'>
+        <image src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+

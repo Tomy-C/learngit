@@ -1,0 +1,34 @@
+<view class='big'>
+  <view class='font-m msg-box'>
+    <image style="width:30rpx;height:30rpx" src='/sourceImage/登录/username.png'></image>
+    <text>小王-测试 </text> <text> 18324857482</text> 
+  </view>
+  <view class='font-m msg-box'>
+    <image class='box-adi'src='/sourceImage/home/red_circle.png'></image>
+    <text>出发地 </text> <text> 石泉路时代商务中心</text> 
+  </view>
+  <view class='font-m msg-box'>
+    <image class='box-adi'src='/sourceImage/home/green_circle.png'></image>
+    <text>目的地 </text> <text> 石狮</text> 
+  </view>
+  <view class='font-m msg-box'>
+    <image class='box-adi'src=''></image>
+    <text>2018-05-24 17:21:17</text>
+  </view>
+  <map class='map' hidden='{{showmap}}'></map>
+  <view class='bg' hidden='{{showreason}}'></view>
+  <view class='container reason' hidden='{{showreason}}'>
+     <view >
+      <view style=' padding:30rpx;'>更改原因</view>
+      <view><textarea class='area' placeholder='请输入更改目的地的原因'></textarea></view>
+     <view class='btnss'>
+      <view><button class='btn btn-e' catchtap='cancle'>取消</button></view>
+      <view><button class='btn btn-s' catchtap='sure'>确定</button></view>
+      </view>
+  </view>
+  </view>
+  <view class='btns'>
+      <view><button class='btn btn-e' bindtap='charging'>结束计费</button></view>
+      <view><button class='btn btn-s' bindtap='change'>改目的地</button></view>
+  </view>
+</view>

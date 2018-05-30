@@ -1,0 +1,101 @@
+<view>
+  <view class='box'>
+ <navigator url="/pages/detailorder/detailorder" hover-class="navigator-hover">
+      <view class='box-msg'>
+      <view class='flex box-top'>
+        <view class='flex' style='align-items: center;'>
+          <view style='font-size:30rpx;margin:10px 0 10px 10px;'>日常用车</view>
+          <view class='use-box'>机要通讯</view>
+          <view class='use-box'>舒适型</view>
+          <view class='use-box'>往返</view>
+        </view>
+        <view style='color:#BF6F72;font-size:30rpx;margin:10px'>等待中</view>
+      </view>
+      
+      <view class='align box-bottom'>
+        <view>
+          <view style='color:#999;font-size:30rpx;margin:5px 0 0 16px ;'>2018-05-03 18:49:50</view>
+          <view class='box-add'>
+          <image class='box-adi'  src='/sourceImage/home/red_circle.png'></image>晋江市人大常委会</view>
+          <view class='box-add'>
+          <image  class='box-adi'  src='/sourceImage/home/green_circle.png'></image>泉州市行政服务中心</view>
+        </view>
+        
+      
+        <view class='btn'>
+          <button class='run' catchtap='totravel'>开始用车</button>
+        </view>
+
+      </view>
+    </view>
+    
+    </navigator>
+</view>
+  <view class='box'>
+ <navigator url="/pages/spend/spend" open-type="redirect">
+      <view class='box-msg'>
+      <view class='flex box-top'>
+        <view class='flex' style='align-items: center;'>
+          <view style='font-size:30rpx;margin:10px 0 10px 10px;'>日常用车</view>
+          <view class='use-box'>机要通讯</view>
+          <view class='use-box'>舒适型</view>
+          <view class='use-box'>往返</view>
+        </view>
+        <view style='color:#BF6F72;font-size:30rpx;margin:10px'>已完成</view>
+      </view>
+      
+      <view class='flex box-bottom'>
+        <view>
+          <view style='color:#999;font-size:30rpx;margin:5px 0 0 16px ;'>2018-05-03 18:49:50</view>
+          <view class='box-add'>
+          <image class='box-adi'  src='/sourceImage/home/red_circle.png'></image>石泉路时代商务大厦</view>
+          <view class='box-add'>
+          <image  class='box-adi'  src='/sourceImage/home/green_circle.png'></image>石狮</view>
+        </view>
+        
+      
+        <view class='flex change-main'>
+          <view class='change-aim'>续单</view>
+        </view>
+
+      </view>
+    </view>
+    
+    </navigator>
+</view>
+
+
+</view>
+
+<view class='box'>
+ <navigator url="/pages/evaluate/evaluate" hover-class="navigator-hover">
+      <view class='box-msg'>
+      <view class='flex box-top'>
+        <view class='flex' style='align-items: center;'>
+          <view style='font-size:30rpx;margin:10px 0 10px 10px;'>日常用车</view>
+          <view class='use-box'>机要通讯</view>
+          <view class='use-box'>舒适型</view>
+          <view class='use-box'>往返</view>
+        </view>
+        <view style='color:#BF6F72;font-size:30rpx;margin:10px'>待评价</view>
+      </view>
+      
+      <view class='flex box-bottom'>
+        <view>
+          <view style='color:#999;font-size:30rpx;margin:5px 0 0 16px ;'>2018-05-03 18:49:50</view>
+          <view class='box-add'>
+          <image class='box-adi'  src='/sourceImage/home/red_circle.png'></image>晋江市人大常委会</view>
+          <view class='box-add'>
+          <image  class='box-adi'  src='/sourceImage/home/green_circle.png'></image>泉州市行政服务中心</view>
+        </view>
+        
+      
+        <view class='flex change-main'>
+          <view class='change-aim'>续单</view>
+        </view>
+
+      </view>
+    </view>
+    
+    </navigator>
+</view>

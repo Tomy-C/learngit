@@ -1,0 +1,16 @@
+.msg-tip{
+  margin: 20px 0 20px 10px;
+  font-size: 35rpx;
+  font-weight: 600;
+
+}
+.msg-time{
+  font-size: 25rpx;
+  color:#999;
+  margin-left: 10px;
+}
+.msg-content{
+  font-size: 25rpx;
+  color:#999;
+  margin: 20px 0 20px 10px;
+}

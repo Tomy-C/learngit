@@ -1,0 +1,56 @@
+/*信息盒子*/
+.flex{
+  display: flex;
+}
+
+
+.box-msg{
+  background-color: #fff;
+  width: 95%;
+  margin: 5px auto;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 3px #999;
+  border-radius: 5px;
+}
+.use-box{
+  border: 1px solid #999;
+  font-size: 25rpx;
+  padding: 0 5rpx;
+  margin: 0 5px;
+}
+.box-top{
+  justify-content: space-between;
+  border-bottom: 1px dashed #999;
+}
+.box-bottom{
+  justify-content: space-between;
+}
+.box-add{
+  font-size:25rpx;
+  margin:5px 0;
+}
+.box-adi{
+  width:6px;
+  height:6px;
+  margin: 2px 5px;
+}
+.change-main{
+  align-items: flex-end;
+}
+.change-aim{
+  margin: 5px 10px 5px 0;
+  padding: 0 10rpx;
+  border:1px solid #77D7C1;
+  border-radius: 4px;
+  color:#77D7C1;
+  font-size: 30rpx;
+}
+.btn{
+  margin-right: 10px
+}
+.run{
+  border-radius: 26px;
+  background-color: #3B99D7;
+  color:#fff;
+  font-size: 40rpx;
+}

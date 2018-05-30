@@ -1,0 +1,163 @@
+<!--头部导航  -->
+<view class="flex box-top">
+  <view></view>
+  <view class='flex'>
+    <view class="{{isselected?'selected':'day-sel'}}" bindtap='show' >日常</view>
+    <view class="{{isselected?'day-sel':'selected'}}" bindtap='noshow' >包车</view>
+  </view> 
+  <view class='rules'><navigator url='/pages/costrule/costrule'>计费规则</navigator> </view>
+</view>
+<!--日常车下单  -->
+<block class='model-one' wx:if="{{ isselected }}">
+  <view class='flex model-box'>
+     <view class='self-walk  flex'  bindtap='selpass'>
+      <view style='font-size:35rpx'>{{username?username:'自己'}}</view>
+      <image class='more' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+     </view> 
+    <view class='line'></view>
+    <picker  class='self-walk' mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class='flex self-walk'  style='width:100%'>
+      <view style='font-size:35rpx'>
+       {{showtime?"即走":time}}
+      </view>
+      <image class='more' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+    </view>
+    </picker>
+  </view>
+
+  <view class='flex addre' bindtap='wherego'>
+    <image class='top-image' src='/sourceImage/home/green_circle.png'></image>
+    <view>{{departure}}</view>
+  </view>
+ 
+    <view class='flex addre go-to'>
+      <view class='flex qunaer'bindtap='towhere'>
+        <image class='top-image' src='/sourceImage/home/red_circle.png'></image>
+        <view style='margin-left:10px;'>{{destination}}</view>
+      </view>
+    <view class='flex' style='margin:0;'>
+      <image class='top-image' src=''></image>
+      <view class="rules {{blue?'blue':''}}" bindtap='blue'>需返程</view>
+    </view>
+  </view>
+  
+  
+  <view class='flex model-box'>
+    <navigator  class='flex self-walk' url="/pages/usercar/usercar" hover-class="navigator-hover" >
+     <view class='self-walk myself flex' >
+      <view style='font-size:25rpx;color:#999;'>{{explain}}</view>
+      <image class='more' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+     </view> 
+    </navigator>
+    <view class='line'></view>
+    <view class='flex self-walk' bindtap='howpay' style=' position:relative; right:0;'>
+        <view style='font-size:25rpx;color:#999;'>{{payment}}</view>
+        <image class='more'  src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+        <view class='payment' hidden="{{showpay}}" >
+        <view class='payment-box'>
+           <view bindtap='danwei'><image src='/sourceImage/待应答/n_check_icon_full_white.png' class='top-image'></image><text class='font-m'> 单位支付</text></view>
+          <view bindtap='caizheng'><image src='/sourceImage/待应答/n_check_icon_full_white.png' class='top-image'></image><text class='font-m'> 财政支付</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='flex car-list'>
+     <view class='car' bindtap='select1'>
+      <image class='sel-car' src="{{show1== true?'/sourceImage/home/car/n_optimizationh_icon_content@3x.png':'/sourceImage/home/car/h_optimizationh_icon_content@3x.png'}}"></image>
+      <view>滴滴出行</view>
+    </view>
+    <view class='car' bindtap='select2'>
+      <image class='sel-car' src="{{show2== true?'/sourceImage/home/car/n_comfort_icon_content@3x.png':'/sourceImage/home/car/h_comfort_icon_content@3x.png'}}"></image>
+      <view>出租出行</view>
+    </view>
+    <view class='car' bindtap='select3'>
+      <image class='sel-car' src="{{show3== true?'/sourceImage/home/car/n_businesstype_icon_content@3x.png':'/sourceImage/home/car/h_businesstype_icon_content@3x.png'}}"></image>
+      <view>公交出行</view>
+    </view>
+  </view>
+  <map style='height:380rpx' hidden='{{showmap}}' longitude="{{longitude}}" latitude="{{latitude}}"></map>
+</block>
+<!--包车下单  -->
+<block wx:else>
+<view class='flex model-box'>
+     <view class='self-walk  flex'  bindtap='selpass'>
+      <view style='font-size:35rpx'>{{username?username:'自己'}}</view>
+      <image class='more' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+     </view> 
+    <view class='line'></view>
+    <picker  class='self-walk' mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class='flex self-walk'  style='width:100%'>
+      <view style='font-size:35rpx'>
+       {{showtime?"即走":time}}
+      </view>
+      <image class='more' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+    </view>
+    </picker>
+  </view>
+
+  <navigator url='/pages/departure/departure'>
+    <view class='flex addre'>
+    <image style='width:10px;height:10px;' src='/sourceImage/home/green_circle.png'></image>
+    <view>{{departure}}</view>
+  </view>
+  </navigator>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+  <view class='flex addre go-to'>
+    <view class='flex'  style='align-items: center; margin-left:0;'>
+      <view style='margin-left:10px;'>{{chartered?'选择包车的类型' : multiArray[0][multiIndex[0]] }}{{chartered?'' :' - ' }}{{chartered?'' : multiArray[1][multiIndex[1]] }}</view>
+    </view>
+    <view class='flex'>
+       <image class='more' style='margin-right:10px' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+    </view>
+  </view>
+  </picker>
+  <view class='flex model-box'>
+    <navigator  class='flex self-walk' url="/pages/usercar/usercar" hover-class="navigator-hover" >
+     <view class='self-walk myself flex' >
+      <view style='font-size:25rpx;color:#999;'>{{explain}}</view>
+      <image class='more' src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+     </view> 
+    </navigator>
+    <view class='line'></view>
+     <view class='flex self-walk' bindtap='howpay' style=' position:relative; right:0;'>
+        <view style='font-size:25rpx;color:#999;'>{{payment}}</view>
+        <image class='more'  src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+        <view class='payment' hidden="{{showpay}}" >
+        <view class='payment-box'>
+           <view bindtap='danwei'><image src='/sourceImage/待应答/n_check_icon_full_white.png' class='top-image'></image><text class='font-m'> 单位支付</text></view>
+          <view bindtap='caizheng'><image src='/sourceImage/待应答/n_check_icon_full_white.png' class='top-image'></image><text class='font-m'> 财政支付</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='flex car-list'>
+   
+    <view class='car' bindtap='select2'>
+      <image class='sel-car' src="{{show2== true?'/sourceImage/home/car/n_comfort_icon_content@3x.png':'/sourceImage/home/car/h_comfort_icon_content@3x.png'}}"></image>
+      <view>舒适型</view>
+    </view>
+    <view class='car' bindtap='select3'>
+      <image class='sel-car' src="{{show3== true?'/sourceImage/home/car/n_businesstype_icon_content@3x.png':'/sourceImage/home/car/h_businesstype_icon_content@3x.png'}}"></image>
+      <view>商务车</view>
+    </view>
+     <view class='car' bindtap='select4'>
+      <image class='sel-car' src="{{show4== true?'/sourceImage/home/car/n_minibus_icon_content@3x.png':'/sourceImage/home/car/h_minibus_icon_content@3x.png'}}"></image>
+      <view>小巴车</view>
+    </view>
+  </view>
+     <map style='height:380rpx' hidden='{{showmap}}' longitude="{{longitude}}" latitude="{{latitude}}"></map>
+ 
+</block>
+<view  class='submit-btn' style='width:100%;'>
+  <view class='billing' >
+    <view><text style='font-size:30rpx'>约</text><text style='font-size:40rpx;color:#FC625D'>60.40</text><text style='font-size:30rpx'>元</text></view>
+    <view style='font-size:20rpx;color:#999;'>约20.51公里,45分钟</view>
+  </view>
+ <view style='width:70%; margin: 0 auto'>
+  <button bindtap='submitto' style='background-color:#3B99D7;color:#fff;margin-bottom:15px;'>提交申请</button>
+ </view>
+
+   
+</view>
+
+

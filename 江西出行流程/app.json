@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/message/message",
+    "pages/approve/approve",
+    "pages/evaluate/evaluate",
+    "pages/msgdetail/msgdetail",
+    "pages/applicationcar/applicationcar",
+    "pages/passengers/passengers",
+    "pages/usercar/usercar",
+    "pages/costrule/costrule",
+    "pages/coupon/coupon",
+    "pages/order/order",
+    "pages/destination/destination",
+    "pages/departure/departure",
+    "pages/wallet/wallet",
+    "pages/setting/setting",
+    "pages/detailorder/detailorder",
+    "pages/travel/travel",
+    "pages/spend/spend"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3B99D7",
+    "navigationBarTitleText": "江西出行",
+    "navigationBarTextStyle":"#fff"
+  }
+}

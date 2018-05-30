@@ -1,0 +1,5 @@
+<view>
+  <view class='msg-tip'>消息1</view>
+  <view class='msg-time'>2018-01-01 09:30:00</view>
+  <text class='msg-content'>内容1</text>
+</view>

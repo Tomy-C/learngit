@@ -1,0 +1,37 @@
+<view  class='font-m big'>
+  <view class='box'>
+    <text class='tip'>预计费用</text><text style='color:#FC625D'>23.04</text>
+  </view>
+  <view class='box' wx:for="{{info}}" wx:key="{{index}}">
+    <view><text class='tip'>{{item.tip}}</text>{{item.content}}<text></text></view>
+  </view>
+  <view class='box'>
+    <view class='between' style='margin:20rpx'>
+    <view class='flex'>
+       <text class='tip' style='margin:0 20rpx 20rpx 0'>用车信息</text>
+       <view  >
+        <view>小王测试</view>
+        <view class='font-s'>2018-05-27 17:18:37</view>
+        <view class='font-m'>
+          <image class='box-adi' src='/sourceImage/home/red_circle.png'></image><text>南洋路</text> 
+        </view>
+        <view class='font-m'>
+          <image class='box-adi' src='/sourceImage/home/green_circle.png'></image><text>石狮</text> 
+        </view>
+      </view>
+    </view> 
+      <view>往返</view>
+    </view>
+   
+  </view>
+  <view class='flex pay box'> 
+    <text class='tip'>支付方式</text>
+    <view class='font-m'>
+          <image class='box-adi' src='/sourceImage/待审批/h_check_icon_content.png'></image><text>单位支付</text> 
+    </view>
+  </view>
+  <view class='btns'>
+      <view><button class='btn btn-e' bindtap='refuse'>驳回</button></view>
+      <view><button class='btn btn-s' bindtap='toorder'>批准</button></view>
+  </view>
+</view>

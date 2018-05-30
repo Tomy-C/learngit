@@ -1,0 +1,173 @@
+<!--index.wxml-->
+<view class='main' >
+<!--右侧滑块  -->
+ <view class="page_tab">  
+    <block wx:if="{{true}}">  
+      <navigator url='/pages/login/login'>  
+        <image class='user_head' src='/sourceImage/侧栏菜单/left_headportrait_bg_navbar@3x.png'></image>  
+        <view class='user_name'>未登录</view>  
+      </navigator>  
+    </block>  
+    <block wx:else>  
+      <image class='user_head' src="/sourceImage/侧栏菜单/left_headportrait_bg_navbar@3x.png"></image>  
+      <view class='user_name'>小王</view>  
+    </block>  
+    <view class="page_tab_content"> 
+      <navigator url='/pages/order/order'>  
+        <view class="wc">  
+          <image src='/sourceImage/侧栏菜单/orderform_icon@3x.png'></image>  
+          <text>我的订单</text>  
+        </view>  
+      </navigator>
+      <navigator url='/pages/wallet/wallet'>
+        <view class="wc">  
+          <image src='/sourceImage/侧栏菜单/wallet_icon@3x.png'></image>  
+          <text bindtap='tosat'>钱包</text>  
+      </view> 
+      </navigator>  
+      <navigator url='/pages/coupon/coupon'>
+        <view class="wc">    
+          <image src='/sourceImage/侧栏菜单/discountcoupon_icon@3x.png'></image>  
+          <text>优惠券</text>  
+        </view>
+      </navigator>
+        
+      <navigator  url='/pages/costrule/costrule'>  
+        <view class="wc">  
+          <image src='/sourceImage/侧栏菜单/rule_icon@3x.png'></image>  
+          <text>我的用车规则</text>  
+        </view>  
+      </navigator>  
+      <navigator url='/pages/setting/setting'>  
+        <view class="wc">  
+          <image src='/sourceImage/侧栏菜单/set_icon@3x.png'></image>  
+          <text>设置</text>  
+        </view>  
+      </navigator>  
+       
+      <view style='position: fixed;bottom:5px;'>
+      <image src='/sourceImage/侧栏菜单/telephone_icon@3x.png'></image>
+      <text style='font-size:30rpx;color:#999;'>热线电话:0595-88888615</text>
+      </view>  
+    </view>  
+  </view>  
+  <!--遮罩  -->
+  <view class="bg" bindtap='hideview' style='display:{{display}}'></view>  
+<!--左侧  -->
+  <view class='right-model home' style="{{translate}}">
+ <view class='nav-top'>
+  <view class='user-imag'>
+    <image  bindtap="getUserInfo" bindtap='showview'   src='/sourceImage/home/menu_icon_navbar@3x.png'></image>
+  </view>
+  
+  <view class='switch'>
+      <view class="selected switch-gr" >公务出行</view>
+  </view>
+
+  <view class='user-imag'>
+    <image bindtap='toMsg' src='/sourceImage/home/n_news_icon_navbar@3x.png'></image>
+  </view>
+ 
+ </view>
+ <!--公务  -->
+<view>
+<!--轮播  -->
+  <swiper class="swiper" indicator-dots="true"  interval="5000" duration="1000">    
+      <block wx:for="{{movies}}" wx:for-index="index" wx:key='index'>    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+  </swiper>
+<!--审核订单  -->
+<navigator url="/pages/approve/approve" hover-class="navigator-hover">
+  <view class='check-order'>
+    <view style='padding-left: 10px;'>审核订单</view>
+
+    <view class='checked'>
+      <view>没有审核的订单</view>
+      <image src='/sourceImage/home/enterinto_icon_content@3x.png'></image>
+    </view>
+ </view>
+</navigator>
+
+<!--新订单  -->
+
+  <block>
+    <view style='color:#999;font-size:30rpx;padding:10px'>您的新订单</view>
+    <!--新订单信息  -->
+    <navigator url="/pages/evaluate/evaluate" hover-class="navigator-hover">
+      <view class='box-msg'>
+      <view class='flex box-top'>
+        <view class='flex' style='align-items: center;'>
+          <view style='font-size:30rpx;margin:10px 0 10px 10px;'>日常用车</view>
+          <view class='use-box'>机要通讯</view>
+          <view class='use-box'>舒适型</view>
+          <view class='use-box'>往返</view>
+        </view>
+        <view style='color:#BF6F72;font-size:30rpx;margin:10px'>待评价</view>
+      </view>
+      
+      <view class='flex box-bottom'>
+        <view>
+          <view style='color:#999;font-size:30rpx;margin:5px 0 0 16px ;'>2018-05-03 18:49:50</view>
+          <view class='box-add'>
+          <image class='box-adi'  src='/sourceImage/home/red_circle.png'></image>晋江市人大常委会</view>
+          <view class='box-add'>
+          <image  class='box-adi'  src='/sourceImage/home/green_circle.png'></image>泉州市行政服务中心</view>
+        </view>
+        
+      
+        <view class='flex change-main'>
+          <view class='change-aim'>续单</view>
+          <view class='change-aim' >更改目的地</view>
+        </view>
+
+      </view>
+    </view>
+    
+    </navigator>
+ <navigator url="/pages/spend/spend" open-type="redirect">
+      <view class='box-msg'>
+      <view class='flex box-top'>
+        <view class='flex' style='align-items: center;'>
+          <view style='font-size:30rpx;margin:10px 0 10px 10px;'>日常用车</view>
+          <view class='use-box'>机要通讯</view>
+          <view class='use-box'>舒适型</view>
+          <view class='use-box'>往返</view>
+        </view>
+        <view style='color:#BF6F72;font-size:30rpx;margin:10px'>已完成</view>
+      </view>
+      
+      <view class='flex box-bottom'>
+        <view>
+          <view style='color:#999;font-size:30rpx;margin:5px 0 0 16px ;'>2018-05-03 18:49:50</view>
+          <view class='box-add'>
+          <image class='box-adi'  src='/sourceImage/home/red_circle.png'></image>石泉路时代商务大厦</view>
+          <view class='box-add'>
+          <image  class='box-adi'  src='/sourceImage/home/green_circle.png'></image>石狮</view>
+        </view>
+        
+      
+        <view class='flex change-main'>
+          <view class='change-aim'>续单</view>
+        </view>
+
+      </view>
+    </view>
+    
+    </navigator>
+
+
+    
+  </block>
+<view style='height:50px;'></view>
+  <navigator url="/pages/applicationcar/applicationcar" hover-class="navigator-hover" >
+    <view class='button-bottom'>
+        <button class='button-s' type='default' style='outline:none;'>用车申请</button>
+    </view>
+  </navigator>
+</view> 
+</view>
+</view>  
+
